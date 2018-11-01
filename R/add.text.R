@@ -1,10 +1,9 @@
-
 #' Annotate Plots.
 #' @description
 #' Used to annotate the plots. Add annotation on points chosen on
 # the plot. Place the cursor and left click. Repeat for each point desired. Click the middel button to
 # escape. Then enter the desired text for each of the chosen points.
-#' @param cex provides control over the text font size (default=1)
+#' @param cex provides control over the text font size (default=1).
 #' @return Draft \code{\link{text}} commands that might be added to a function.
 #' @seealso documentation for \code{\link{locator}}.
 #' @examples
