@@ -1,5 +1,13 @@
-pause <- function(prompt = "Touch Return to continue; type stop to breakout: ") {
-    if (!interactive()) 
+#' Allows a pause in the running of an R function.
+#'
+#' @export
+pause <- function(prompt = "Touch Return to continue; type stop to breakout: ", skip = FALSE, 
+    browse = FALSE) {
+    if (browse) 
+        browser()
+    if (skip) 
+        return(FALSE)
+    if (!interactive() || (exists(".Batch") && .Batch)) 
         return(TRUE)
     repeat {
         cat(prompt)
@@ -11,7 +19,14 @@ pause <- function(prompt = "Touch Return to continue; type stop to breakout: ") 
             return(FALSE)
         if (ans == "") 
             return(FALSE)
-        if (ans == "stop") 
-            stop("Stopping")
+        if (ans == "abort") {
+            stop("Abort")
+            break
+        }
+        if (ans == "stop") {
+            cat("Breaking out \n")
+            stop("Abort")
+            return(TRUE)
+        }
     }
 }
