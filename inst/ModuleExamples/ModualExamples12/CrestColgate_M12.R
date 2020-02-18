@@ -3,6 +3,15 @@
 #------------------------------------------------------------------------------
 
 library("RTseries")
+
+#read the data
+
+CrestColgate<-read.csv("http://www.public.iastate.edu/~wqmeeker/anonymous/Stat451_data/CrestColgate.csv")
+Colgate.ts <- ts(CrestColgate$Colgate,freq=52,start=1958)
+Colgate.tsd <- tsd(Colgate.ts,data.title = "Colgate Market Share Weekly Data",response.units = "Precent")
+Crest.ts <- ts(CrestColgate$Crest,freq=52,start=1958)
+Crest.tsd <- tsd(Crest.ts,data.title = "Crest Market Share Weekly Data",response.units = "Precent")
+
 # -----------------------------------------------------------------------------------
 # code for figure on page 12-4
 plot(Colgate.tsd)

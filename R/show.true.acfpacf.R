@@ -18,7 +18,7 @@
 #' 
 #' @importFrom stats ARMAacf
 #' @export
-show.true.acfpacf <- function(model, nacf = 24, print.table = FALSE) {
+"show.true.acfpacf" <- function(model, nacf = 24, print.table = FALSE) {
     old.par <- par(mfrow = c(2, 1), oma = c(0, 0, 4, 0), err = -1)
     on.exit({
         par(old.par)
@@ -44,5 +44,6 @@ show.true.acfpacf <- function(model, nacf = 24, print.table = FALSE) {
     # plot the true pacf
     my.acf.plot(z, print.table = print.table)
     mtext(side = 3, line = 0.65, cex = 1, model.string)
-    invisible()
+    results <- list(true.acf=tacfv, true.pacf=true.pacf )
+    invisible(results)
 }

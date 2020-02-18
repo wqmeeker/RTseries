@@ -1,8 +1,8 @@
 Package: RTseries
 Type: Package
 Title: Interactive Time Series Analysis Tools
-Version: 1.0.71
-Date: 2020-01-13
+Version: 1.0.72
+Date: 2020-02-18
 Authors@R: person("William", "Meeker", email = "wqmeeker@iastate.edu", role = c("aut", "cre"))
 Maintainer: William Meeker <wqmeeker@iastate.edu>
 Description: Provides tools to allow a user to identify a time series model, estimate the model parameters, and forecast future values of a univariate time series using ARIMA models, possibly with a transfer function. Some pedagogical tools and utilities are also provided.
