@@ -15,7 +15,7 @@ Durbin(the.acf, lag.max = 10)
 For a given acf function, computes the pacf
 }
 \examples{
-Durbin(0.4)
+Durbin(c(0.4, rep(0,100)))
 Durbin(0.9^(1:100))
 
 
