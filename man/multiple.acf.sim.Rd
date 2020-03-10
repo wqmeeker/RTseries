@@ -4,8 +4,11 @@
 \alias{multiple.acf.sim}
 \title{Time Series Model Simulation and ACF Plot}
 \usage{
-multiple.acf.sim(model = NULL, sample.size.vec = c(30, 60, 120),
-  number.simulations = 4)
+multiple.acf.sim(
+  model = NULL,
+  sample.size.vec = c(30, 60, 120),
+  number.simulations = 4
+)
 }
 \arguments{
 \item{model}{Optional list containing two components names ar and ma. These components should be vectors containing coefficianes of autoregressive and moving average parts of an ARMA model. If the list is not provided, a random model and parameters are generated.}

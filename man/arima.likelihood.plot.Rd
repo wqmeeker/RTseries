@@ -4,8 +4,14 @@
 \alias{arima.likelihood.plot}
 \title{ARIMA Model Likelihood Plot}
 \usage{
-arima.likelihood.plot(data.tsd, model, param1 = list(1, seq(-0.99, 0.99,
-  length = 10)), relative = FALSE, verbose = FALSE, my.title)
+arima.likelihood.plot(
+  data.tsd,
+  model,
+  param1 = list(1, seq(-0.99, 0.99, length = 10)),
+  relative = FALSE,
+  verbose = FALSE,
+  my.title
+)
 }
 \arguments{
 \item{data.tsd}{Time series data object.}

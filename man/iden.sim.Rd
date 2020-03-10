@@ -4,8 +4,7 @@
 \alias{iden.sim}
 \title{Model Identification Using Simulated Data}
 \usage{
-iden.sim(realization.size = 100, model, lag.max = 20,
-  plot.true = FALSE)
+iden.sim(realization.size = 100, model, lag.max = 20, plot.true = FALSE)
 }
 \arguments{
 \item{realization.size}{Size of the sample realization to be generated (default is 100).}

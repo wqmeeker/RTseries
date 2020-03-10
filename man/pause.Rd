@@ -4,8 +4,11 @@
 \alias{pause}
 \title{Allows a pause in the running of an R function.}
 \usage{
-pause(prompt = "Touch Return to continue; type stop to breakout: ",
-  skip = FALSE, browse = FALSE)
+pause(
+  prompt = "Touch Return to continue; type stop to breakout: ",
+  skip = FALSE,
+  browse = FALSE
+)
 }
 \description{
 Allows a pause in the running of an R function.

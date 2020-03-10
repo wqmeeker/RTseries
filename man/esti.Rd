@@ -4,10 +4,24 @@
 \alias{esti}
 \title{ARIMA Model Estimation}
 \usage{
-esti(data.tsd, gamma = 1, m = 0, model, gof.lag = 10, lag.max = 38,
-  number.forecasts = 24, pred.level = 0.95, xreg.in, y.range, x.range,
-  d.trend = FALSE, print.table = FALSE, ps1 = NULL, ps2 = NULL,
-  ...)
+esti(
+  data.tsd,
+  gamma = 1,
+  m = 0,
+  model,
+  gof.lag = 10,
+  lag.max = 38,
+  number.forecasts = 24,
+  pred.level = 0.95,
+  xreg.in,
+  y.range,
+  x.range,
+  d.trend = FALSE,
+  print.table = FALSE,
+  ps1 = NULL,
+  ps2 = NULL,
+  ...
+)
 }
 \arguments{
 \item{data.tsd}{Input time series data object (output from the tsd function).}

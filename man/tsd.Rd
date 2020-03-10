@@ -4,8 +4,12 @@
 \alias{tsd}
 \title{Create a Time Series Data Object}
 \usage{
-tsd(data.ts, data.title = deparse(substitute(data.ts)),
-  time.units = "Time", response.units = deparse(substitute(data.ts)))
+tsd(
+  data.ts,
+  data.title = deparse(substitute(data.ts)),
+  time.units = "Time",
+  response.units = deparse(substitute(data.ts))
+)
 }
 \arguments{
 \item{data.ts}{A time series object (created with the R \code{\link{ts}} function). This data should contains start date, end date and frequency.}

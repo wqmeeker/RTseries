@@ -4,8 +4,14 @@
 \alias{show.impulse.response}
 \title{Compute and plot the impulse response function}
 \usage{
-show.impulse.response(denominator = numeric(), numerator = numeric(),
-  delay = 0, lag.max = 20, y.axis = FALSE, type = "transfer")
+show.impulse.response(
+  denominator = numeric(),
+  numerator = numeric(),
+  delay = 0,
+  lag.max = 20,
+  y.axis = FALSE,
+  type = "transfer"
+)
 }
 \arguments{
 \item{denominator}{Vector of denominator or autoregressive (AR) coefficients (default is none).}

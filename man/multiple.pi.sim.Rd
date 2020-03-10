@@ -4,8 +4,14 @@
 \alias{multiple.pi.sim}
 \title{Prediction Intervals Simulation}
 \usage{
-multiple.pi.sim(sample.sizes = c(30, 120), confidence.levels = c(0.8,
-  0.95), mu = 100, sigma = 10, number.simulations = 100, scale = 2)
+multiple.pi.sim(
+  sample.sizes = c(30, 120),
+  confidence.levels = c(0.8, 0.95),
+  mu = 100,
+  sigma = 10,
+  number.simulations = 100,
+  scale = 2
+)
 }
 \arguments{
 \item{sample.sizes}{A vector of sample sizes. Length 2 is recommended. Default is sample.sizes=c(30, 120)}

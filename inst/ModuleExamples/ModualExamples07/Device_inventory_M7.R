@@ -2,13 +2,13 @@
 #Example M7: device inventory
 #------------------------------------------------------------------------
 
-library("RTseries")
+library(RTseries)
 device.inventory.tsd <-  tsd(ts(scan(RTseriesExtDataPath("device_inventory.txt")), frequency=12,start=1984),data.title="Device Inventory 1984-1994", response.units="Hundreds of Devices",time.units="Year")
 
 # -----------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------
 # code for figure on page 7-13
-plot(device.inventory.tsd,main = "Device Inventory 1984-1994")
+plot(device.inventory.tsd)
 abline(h=0,lwd=1)
 
 # -----------------------------------------------------------------------------------
@@ -23,6 +23,7 @@ iden(device.inventory.tsd,d=1)
 # code for figure on page 7-16
 iden(device.inventory.tsd,d=2)
 
+
 # -----------------------------------------------------------------------------------
 # code for figure on page 7-18
 arima.likelihood.plot(device.inventory.tsd,
@@ -30,18 +31,18 @@ arima.likelihood.plot(device.inventory.tsd,
 
 
 # -----------------------------------------------------------------------------------
-# code for figure on page 7-19
+# code for figure on page 7-19 (zoom in)
 #??
 arima.likelihood.plot(device.inventory.tsd,
                       model = model.pdq(p = 1), list(1, seq(.97, .999, length =50)))
 
 # -----------------------------------------------------------------------------------
 # code for figure on page 7-21,7-22
-esti(data.tsd = device.inventory.tsd, model =model.pdq(p = 1), y.range =c(-12,22) )
+esti(data.tsd = device.inventory.tsd, model=model.pdq(p = 1), y.range =c(-12,22) )
 
 # -----------------------------------------------------------------------------------
 # code for figure on page 7-24,7-25
-esti(data.tsd = device.inventory.tsd, model =model.pdq(p = 2) ,y.range =c(-12,22))
+esti(data.tsd = device.inventory.tsd, model=model.pdq(p = 2) ,y.range =c(-12,22))
 
 # -----------------------------------------------------------------------------------
 # code for figure on page 7-35
@@ -69,20 +70,28 @@ arima.contour.plot(device.inventory.tsd,
                    model = model.pdq(p = 2),
                    list(1, seq(1.375, 1.395, length = 40)),
                    list(2, seq(-0.405, -0.390, length = 40)))
+
 # code for figure on page 7-39, 7-40
 esti(data.tsd = device.inventory.tsd, model =model.pdq(p = 3) ,y.range =c(-12,22))
+
+#check the roots of the polynomial
+arma.roots(c(1.3210381, -0.2287974, -0.1265840))
 # -----------------------------------------------------------------------------------
 # code for figure on page 7-41
 esti(data.tsd = device.inventory.tsd, model =model.pdq(p = 2) ,y.range =c(-12,22))
 
 # -----------------------------------------------------------------------------------
 # code for figure on page 7-43 7-44
-esti(data.tsd = device.inventory.tsd, model =model.pdq(p = 1,d=1,q=0) ,y.range =c(-12,22))
+esti(data.tsd = device.inventory.tsd, model = model.pdq(p = 1,d=1,q=0) ,y.range =c(-12,22))
 
 # -----------------------------------------------------------------------------------
 # code for figure on page 7-45
 esti(data.tsd = device.inventory.tsd, model =model.pdq(p = 3) ,y.range =c(-12,22))
 
+# trying AR(4)
+esti(data.tsd = device.inventory.tsd, model =model.pdq(p = 4) ,y.range =c(-12,22))
+#check the roots of the polynomial
+arma.roots(c(1.000000000, -0.800223792, 0.136513128, 0.128990426))
 # -----------------------------------------------------------------------------------
 # code for figure on page 7-46 7-47
 esti(data.tsd = device.inventory.tsd, model =model.pdq(p = 1,d = 1,q = 1) ,y.range =c(-12,22))

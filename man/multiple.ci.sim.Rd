@@ -4,9 +4,14 @@
 \alias{multiple.ci.sim}
 \title{Confidence Interval Simulation}
 \usage{
-multiple.ci.sim(sample.sizes = c(30, 120), confidence.levels = c(0.8,
-  0.95), mu = 100, sigma = 10, number.simulations = 100,
-  scale = 2.5)
+multiple.ci.sim(
+  sample.sizes = c(30, 120),
+  confidence.levels = c(0.8, 0.95),
+  mu = 100,
+  sigma = 10,
+  number.simulations = 100,
+  scale = 2.5
+)
 }
 \arguments{
 \item{sample.sizes}{A vector of sample sizes. Length 2 is recommended. Default is sample.sizes=c(30, 120)}

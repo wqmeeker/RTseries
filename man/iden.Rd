@@ -4,8 +4,16 @@
 \alias{iden}
 \title{ARIMA Model Identification}
 \usage{
-iden(data.tsd, seasonal = tsp(data.tsd)[3], gamma = 1, m = 0,
-  d = 0, D = 0, lag.max = 38, print.table = FALSE)
+iden(
+  data.tsd,
+  seasonal = tsp(data.tsd)[3],
+  gamma = 1,
+  m = 0,
+  d = 0,
+  D = 0,
+  lag.max = 38,
+  print.table = FALSE
+)
 }
 \arguments{
 \item{data.tsd}{Time series data object (output from the tsd function).}

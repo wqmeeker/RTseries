@@ -4,8 +4,7 @@
 \alias{model.pdq}
 \title{Specify an ARIMA Model}
 \usage{
-model.pdq(p = 0, d = 0, q = 0, P = 0, D = 0, Q = 0,
-  period = NULL)
+model.pdq(p = 0, d = 0, q = 0, P = 0, D = 0, Q = 0, period = NULL)
 }
 \arguments{
 \item{p}{The order of the nonseasonal AR polynomial in the model.}

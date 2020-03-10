@@ -4,10 +4,17 @@
 \alias{arima.contour.plot}
 \title{ARIMA Model Likelihood Contour Plot}
 \usage{
-arima.contour.plot(data.tsd, model, param1 = list(1, seq(-0.99, 0.99,
-  length = 8)), param2 = list(2, seq(-0.99, 0.99, length = 8)),
-  relative = FALSE, verbose = FALSE, my.title, persp.plot = FALSE,
-  ...)
+arima.contour.plot(
+  data.tsd,
+  model,
+  param1 = list(1, seq(-0.99, 0.99, length = 8)),
+  param2 = list(2, seq(-0.99, 0.99, length = 8)),
+  relative = FALSE,
+  verbose = FALSE,
+  my.title,
+  persp.plot = FALSE,
+  ...
+)
 }
 \arguments{
 \item{data.tsd}{Time series data object.}
