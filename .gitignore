@@ -1,0 +1,14 @@
+.Rproj.user
+.Rhistory
+.RData
+*.lnk
+*~
+*.ini
+*.rda
+NAMESPACE
+*.pdf
+.Rbuildignore
+RTseries.Rproj
+src-i386
+src-x64
+#*#
