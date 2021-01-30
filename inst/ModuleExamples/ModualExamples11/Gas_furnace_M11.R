@@ -1,6 +1,6 @@
 library("RTseries")
-gasrxy<-read.table("gasrxy.txt",header = F)
-gasr.xymat <- as.matrix(gasrxy, ncol=2,byrow=T) #No "gasrxy.txt" in Package
+gasrxy<-read.csv(RTseriesExtDataPath("gasrxy.csv"))
+gasr.xymat <- as.matrix(gasrxy, ncol=2,byrow=T) 
 # -----------------------------------------------------------------------------------
 # code for figure on page 11-4
 plot(gasrx.tsd)

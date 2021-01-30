@@ -1,9 +1,12 @@
-Location: RTseries\inst\ModuleExamples\ExpectationVarianceCovariance
+Location: RTseries\inst\ModuleExamples\ExpectationVarianceCovariance\ExpectationVarianceCovariance.R
 
 ###
 ### install the latest version of RTseries
 ###
-To install RTseries from GitHub, use
+install.packages("https://wqmeeker.stat.iastate.edu/RTseries.tar.gz", repos=NULL)
+
+
+Alternatively, to install RTseries from GitHub, use
 
 install.packages("devtools")
 library(devtools)
@@ -17,7 +20,7 @@ color.test()
 ###
 ### we can also scan data directly via a URL
 ###
-spot <- scan("http://www.public.iastate.edu/~wqmeeker/anonymous/Stat451_data/spot.txt")
+spot <- scan("https://wqmeeker.stat.iastate.edu/TimeseriesDatasets/spot.txt")
 plot(spot ,type="l")
 
 ###

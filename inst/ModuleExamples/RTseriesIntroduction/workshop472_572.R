@@ -1,14 +1,21 @@
-Location: \RTseries\inst\ModuleExamples\RTseriesIntroduction
+Location: \RTseries\inst\ModuleExamples\RTseriesIntroduction\workshop472_572.R
+
+
+The most recent version of R can always be found at https://www.r-project.org/
 
 If you have not yet instaled RTseries, you can use:
 
-install.packages("http://www.public.iastate.edu/~wqmeeker/RTseries/RTseries.tar.gz", repos=NULL)
+install.packages("https://wqmeeker.stat.iastate.edu/RTseries.tar.gz", repos=NULL)
 
 Then to load RTseries, use
 
 library(RTseries)
 color.test()
 
+
+To see where RTseries has been installed on your computer, do:
+  
+RTseriesExtDataPath("airlineRegdat.csv")
 
 
 
