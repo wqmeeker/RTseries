@@ -12,7 +12,8 @@ iden(
   d = 0,
   D = 0,
   lag.max = 38,
-  print.table = FALSE
+  print.table = FALSE,
+  seasonal.lags = FALSE
 )
 }
 \arguments{
@@ -31,6 +32,8 @@ iden(
 \item{lag.max}{Optional. The maximum number of lags at which to estimate the ACF and PACF. The default value is lag.max=38}
 
 \item{print.table}{Optional. Default value is print.table = FALSE. If print.table = TRUE, R will output a table of the ACF and PACF estimates.}
+
+\item{seasonal.lags}{if TRUE will label ACF and PACF lags in seasonal multiples. Default is FALSE.}
 }
 \value{
 Invisible list containing the numerical values of the ACF and PACF estimates that were plotted.

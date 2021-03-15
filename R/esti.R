@@ -51,7 +51,7 @@
 #' @importFrom stats ts
 #' @importFrom stats tsp
 #' @export
-esti <- function(data.tsd, gamma = 1, m = 0, model, gof.lag = 10, lag.max = 38, number.forecasts = 24, 
+"esti" <- function(data.tsd, gamma = 1, m = 0, model, gof.lag = 10, lag.max = 38, number.forecasts = 24, 
     pred.level = 0.95, xreg.in, y.range, x.range, d.trend = FALSE, print.table = FALSE, ps1 = NULL, ps2 = NULL, 
     ...) {
     # 19 march 2016 modified to work with postscript (after Splus)
@@ -194,7 +194,7 @@ esti <- function(data.tsd, gamma = 1, m = 0, model, gof.lag = 10, lag.max = 38, 
             # acf.out <- acf(the.residuals, lag.max = lag.max, type = 'correlation', plot = FALSE)
             acf.out$type <- "rcorrelation"
             par(mai = c(0.6, 0.5, 0.3, 0.1))
-            my.acf.plot(acf.out, data.tsd, number.parameter = number.parameter, print.table = print.table)
+            my.acf.plot(acf.out, data.tsd, number.parameter = number.parameter, print.table = print.table, seasonal.lags=FALSE)
             screen(2)
             par(mai = c(0.4, 0.5, 0.7, 0.1))
             plot(as.vector(fitted.values), as.vector(the.residuals), xlab = "Fitted Values", ylab = "Residuals", 

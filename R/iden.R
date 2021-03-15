@@ -9,6 +9,7 @@
 #' @param D Optional. The number of seasonal differences carried out on the data. The default value is D=0.
 #' @param lag.max Optional. The maximum number of lags at which to estimate the ACF and PACF. The default value is lag.max=38
 #' @param print.table Optional. Default value is print.table = FALSE. If print.table = TRUE, R will output a table of the ACF and PACF estimates.
+#' @param seasonal.lags if TRUE will label ACF and PACF lags in seasonal multiples. Default is FALSE.
 #' @return Invisible list containing the numerical values of the ACF and PACF estimates that were plotted.
 #' @examples
 #' iden(spot.tsd)
@@ -31,7 +32,7 @@
 #' @importFrom stats tsp
 #' @export
 iden <- function(data.tsd, seasonal = tsp(data.tsd)[3], gamma = 1, m = 0, d = 0, D = 0, lag.max = 38, 
-    print.table = FALSE) {
+    print.table = FALSE, seasonal.lags=FALSE) {
     object.name <- deparse(substitute(data.tsd))
     if (!is.element("tsd", class(data.tsd))) 
         stop("The input data object", object.name, "is not a RTSERIES time series data (tsd) object")
@@ -75,12 +76,12 @@ iden <- function(data.tsd, seasonal = tsp(data.tsd)[3], gamma = 1, m = 0, d = 0,
         print.sd.series(y.trans)
         acf.out <- acf(y.trans, lag.max = lag.max, type = "correlation", plot = FALSE)
         par(mai = c(0.6, 0.5, 0.3, 0.1))
-        my.acf.plot(acf.out, data.tsd, print.table = print.table, xlab = "")
+        my.acf.plot(acf.out, data.tsd, print.table = print.table, xlab = "", seasonal.lags=seasonal.lags)
         mtext("Lag", side = 1, line = 1.6)
         screen(4)
         pacf.out <- acf(y.trans, lag.max = lag.max, type = "partial", plot = FALSE)
         par(mai = c(0.6, 0.5, 0.3, 0.1))
-        my.acf.plot(pacf.out, data.tsd, print.table = print.table, xlab = "")
+        my.acf.plot(pacf.out, data.tsd, print.table = print.table, xlab = "", seasonal.lags=seasonal.lags)
         mtext("Lag", side = 1, line = 1.6)
         close.screen(all.screens = TRUE)
         if (!print.table) 
@@ -117,11 +118,11 @@ iden <- function(data.tsd, seasonal = tsp(data.tsd)[3], gamma = 1, m = 0, d = 0,
         print.sd.series(y.trans)
         acf.out <- acf(yd, lag.max = lag.max, type = "correlation", plot = FALSE)
         par(mai = c(1, 0.5, 0.4, 0.1))
-        my.acf.plot(acf.out, data.tsd, print.table = print.table)
+        my.acf.plot(acf.out, data.tsd, print.table = print.table, seasonal.lags=seasonal.lags)
         screen(3)
         pacf.out <- acf(yd, lag.max = lag.max, type = "partial", plot = FALSE)
         par(mai = c(1, 0.5, 0.4, 0.1))
-        my.acf.plot(pacf.out, data.tsd, print.table = print.table)
+        my.acf.plot(pacf.out, data.tsd, print.table = print.table, seasonal.lags=seasonal.lags)
         close.screen(all.screens = TRUE)
         invisible(list(acf.out, pacf.out))
     }

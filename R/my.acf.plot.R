@@ -4,13 +4,13 @@
 #' @importFrom graphics plot
 #' @importFrom graphics title
 #' @importFrom stats tsp
-my.acf.plot <- function(z, data.ts = NULL, conf.int = T, number.parameter = -1, sample.size = NULL, print.table = FALSE, 
-    xlab = "Lag") {
+"my.acf.plot" <- function(z, data.ts = NULL, conf.int = T, number.parameter = -1, sample.size = NULL, print.table = FALSE, 
+    xlab = "Lag", seasonal.lags=FALSE) {
     true <- FALSE
     if (!is.list(z)) 
         stop("z must be a list")
     cname <- names(z)
-    if (!is.null(data.ts) && !is.null(tsp(data.ts)[3])) {
+    if (!is.null(data.ts) && !is.null(tsp(data.ts)[3]) && !seasonal.lags) {
         seasonal.factor <- tsp(data.ts)[3]
     } else {
         seasonal.factor <- 1
@@ -33,8 +33,8 @@ my.acf.plot <- function(z, data.ts = NULL, conf.int = T, number.parameter = -1, 
         partial <- T
     }, rcorrelation = , correlation = {
         partial <- FALSE
-        #T.x <- z$lag[, 1, 1] * seasonal.factor
-        T.x <- z$lag[, 1, 1]
+        T.x <- z$lag[, 1, 1] * seasonal.factor
+        #T.x <- z$lag[, 1, 1]
         T.y <- z$acf[, 1, 1]
         T.y[1] <- 0
         c1 <- 2 * bartlett.se(T.y, z$n.used)
