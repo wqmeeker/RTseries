@@ -194,7 +194,7 @@
             # acf.out <- acf(the.residuals, lag.max = lag.max, type = 'correlation', plot = FALSE)
             acf.out$type <- "rcorrelation"
             par(mai = c(0.6, 0.5, 0.3, 0.1))
-            my.acf.plot(acf.out, data.tsd, number.parameter = number.parameter, print.table = print.table, seasonal.lags=FALSE)
+            my.acf.plot(acf.out, data.tsd, number.parameter = number.parameter, print.table = print.table, seasonal.lags=TRUE)
             screen(2)
             par(mai = c(0.4, 0.5, 0.7, 0.1))
             plot(as.vector(fitted.values), as.vector(the.residuals), xlab = "Fitted Values", ylab = "Residuals", 
