@@ -2,7 +2,7 @@ The data sets in this folder have one of two different formats.
 
 Most univariate time series data sets (just a single variable) are given
 as text (.txt suffix) files. The time sequence (and order of reading)
-is left to right, one line at a time.  For example, there might be
+is left to right, one line at a time.  For exaample, there might be
 one line of numbers for each year. These text files do not contain any
 explicit information about dates or variable names. That information is usually
 provided elsewhere (e.g., in an assignment or example RTseries commands).

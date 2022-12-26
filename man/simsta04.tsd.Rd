@@ -4,9 +4,11 @@
 \name{simsta04.tsd}
 \alias{simsta04.tsd}
 \title{Simulated Time Series 04}
-\format{A time series data object (created with function tsd).
+\format{
+A time series data object (created with function tsd).
 
- @source Simulated.}
+ @source Simulated.
+}
 \usage{
 simsta04.tsd
 }

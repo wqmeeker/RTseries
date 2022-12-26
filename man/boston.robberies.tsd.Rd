@@ -4,7 +4,9 @@
 \name{boston.robberies.tsd}
 \alias{boston.robberies.tsd}
 \title{Boston Armed Robberies}
-\format{A time series data object (created with function tsd).}
+\format{
+A time series data object (created with function tsd).
+}
 \source{
 Originally analyzed by Deutch and Alt (1977).  Also appeared as Case 11 in Pankrantz (1983).
 }

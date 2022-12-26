@@ -4,7 +4,9 @@
 \name{savings.rate}
 \alias{savings.rate}
 \title{Personal Savings as a Percent of Disposable Personal Income}
-\format{A single vector; read across each line and then down.}
+\format{
+A single vector; read across each line and then down.
+}
 \source{
 Originally from the U.S. Department of Commerse. Also appeared as Case 2 in Pankrantz (1983).
 }

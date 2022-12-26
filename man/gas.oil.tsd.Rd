@@ -4,7 +4,9 @@
 \name{gas.oil.tsd}
 \alias{gas.oil.tsd}
 \title{Gas and Oil Consumption}
-\format{A time series data object (created with function tsd).}
+\format{
+A time series data object (created with function tsd).
+}
 \source{
 Unknown
 }

@@ -4,7 +4,9 @@
 \name{hstart}
 \alias{hstart}
 \title{Housing Starts}
-\format{A single vector; read across each line and then down.}
+\format{
+A single vector; read across each line and then down.
+}
 \source{
 U.S. Bureau of the Census, Construction Reports. Also was provided as an example in the S and S-Plus software systems.
 }

@@ -4,7 +4,9 @@
 \name{Passengers}
 \alias{Passengers}
 \title{Airline Passenger Numbers}
-\format{A single vector; read across each line and then down.}
+\format{
+A single vector; read across each line and then down.
+}
 \source{
 Brown (1962). Also, used as an example in Chapters 2 and 5 of Box and Jenkins (1970).
 }

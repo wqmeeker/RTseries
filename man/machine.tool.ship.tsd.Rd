@@ -4,7 +4,9 @@
 \name{machine.tool.ship.tsd}
 \alias{machine.tool.ship.tsd}
 \title{Machine-Tool Shipments}
-\format{A time series data object (created with function tsd).}
+\format{
+A time series data object (created with function tsd).
+}
 \source{
 Survey of Current Business, U.S. Department of Commerse.  Also appeared as Case 12 in Pankrantz (1983).
 }

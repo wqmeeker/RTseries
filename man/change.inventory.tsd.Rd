@@ -4,7 +4,9 @@
 \name{change.inventory.tsd}
 \alias{change.inventory.tsd}
 \title{Change in Business Inventories}
-\format{A time series data object (created with function tsd).}
+\format{
+A time series data object (created with function tsd).
+}
 \source{
 Business Conditions Digest, November 1979.  Also appeared as Case 1 in Pankrantz (1983).
 }

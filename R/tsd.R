@@ -13,11 +13,19 @@
 #'      response.units='Billions of Dollars', time.units='Year')
 #' iden(savings.rate.tsd)
 #' @export
-tsd <- function(data.ts, data.title = deparse(substitute(data.ts)), time.units = "Time", response.units = deparse(substitute(data.ts))) {
+"tsd" <- function(data.ts, data.title, response.units, time.units = "Time") {
     the.class <- class(data.ts)
     if (the.class != "ts") 
         stop(paste("The class of input data is ", the.class, ". It should be a ts (time series) object.\n", 
             sep = ""))
+  if(missing(data.title)){
+warning("No data title was given in the call to tsd. \nUse the 'data.title = ...', argument!\n")
+data.title <- "No data title given"
+  }
+  if(missing(response.units)){
+warning("No response units was given in the call to tsd. \nUse the 'response.units = ...' argument!\n")
+response.units <- "No units given"
+  }
     attr(data.ts, "time.units") <- time.units
     attr(data.ts, "data.title") <- data.title
     attr(data.ts, "response.units") <- response.units

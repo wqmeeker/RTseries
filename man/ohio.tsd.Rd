@@ -4,7 +4,9 @@
 \name{ohio.tsd}
 \alias{ohio.tsd}
 \title{Ohio Elecricity Consumption}
-\format{A time series data object (created with function tsd).}
+\format{
+A time series data object (created with function tsd).
+}
 \source{
 Used as an example in Mabert (1975).
 }

@@ -4,7 +4,9 @@
 \name{device.inventory.tsd}
 \alias{device.inventory.tsd}
 \title{Device Inventory Levels}
-\format{A time series data object (created with function tsd).}
+\format{
+A time series data object (created with function tsd).
+}
 \source{
 Unknown
 }

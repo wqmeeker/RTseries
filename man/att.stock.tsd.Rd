@@ -4,7 +4,9 @@
 \name{att.stock.tsd}
 \alias{att.stock.tsd}
 \title{AT&T Stock Price}
-\format{A time series data object (created with function tsd).}
+\format{
+A time series data object (created with function tsd).
+}
 \source{
 Wall Stret Journal.  Also appeared as Case 6 in Pankrantz (1983).
 }

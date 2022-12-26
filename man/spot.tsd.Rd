@@ -4,7 +4,9 @@
 \name{spot.tsd}
 \alias{spot.tsd}
 \title{Wolfer Sunspot Numbers}
-\format{A time series data object (created with function tsd).}
+\format{
+A time series data object (created with function tsd).
+}
 \source{
 Used as an example in Chapter 10 Box and Jenkins (1970).
 }

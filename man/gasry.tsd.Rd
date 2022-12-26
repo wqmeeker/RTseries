@@ -4,7 +4,9 @@
 \name{gasry.tsd}
 \alias{gasry.tsd}
 \title{Gas Furnace Percent CO2 Output}
-\format{A time series data object (created with function tsd).}
+\format{
+A time series data object (created with function tsd).
+}
 \source{
 Used in Chapter 10 of Box and Jenkins (1970)
 }

@@ -4,7 +4,9 @@
 \name{gasrx.tsd}
 \alias{gasrx.tsd}
 \title{Gas Furnace Input Rate}
-\format{A time series data object (created with function tsd).}
+\format{
+A time series data object (created with function tsd).
+}
 \source{
 Used as an example in Chapter 10 of Box and Jenkins (1970).
 }

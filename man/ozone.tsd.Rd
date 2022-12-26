@@ -4,7 +4,9 @@
 \name{ozone.tsd}
 \alias{ozone.tsd}
 \title{Ozone Air Polution Values}
-\format{A time series data object (created with function tsd).}
+\format{
+A time series data object (created with function tsd).
+}
 \source{
 Used as an example in Box and Tiao (1975)
 }
